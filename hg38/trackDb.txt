@@ -1,0 +1,8 @@
+track BRCA_CES
+shortLabel BRCA CES
+longLabel BRCA Cancer Effect Size (TCGA, Stage 0-IV)
+visibility full
+useScore 1
+color 0,0,255
+type bed 5
+bigDataUrl https://Townsend-Lab-Yale.github.io/UCSC_GenomeBrowser_Hub/hg38/BRCA_stage(0-IV)_TCGA_CES.bed

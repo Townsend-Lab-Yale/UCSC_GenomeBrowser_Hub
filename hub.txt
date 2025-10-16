@@ -1,0 +1,5 @@
+hub BRCA_CES_TrackHub
+shortLabel BRCA CES
+longLabel BRCA Cancer Effect Size (TCGA, Stage 0-IV)
+genomesFile genomes.txt
+email prarthana.sanjeevareddy@yale.edu
