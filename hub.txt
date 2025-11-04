@@ -3,3 +3,4 @@ shortLabel Breast Cancer CES
 longLabel Breast_Cancer – Cancer Effect Size (TCGA, Stage 0–IV)
 genomesFile genomes.txt
 email jeffrey.townsend@yale.edu
+descriptionUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/Breast_cancer_CancerEffectSize_description.html
