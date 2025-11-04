@@ -7,3 +7,4 @@ searchIndex name
 visibility full
 useScore 1
 color 0,0,255
+html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/Breast_cancer_CancerEffectSize_description.html
