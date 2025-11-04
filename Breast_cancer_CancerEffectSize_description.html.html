@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>BRCA Cancer Effect Size Track Description</title>
+</head>
+<body>
+  <h2>Description</h2>
+  <p>
+    Cancer effect size is a metric that quantifies the intensity of natural selection on somatic mutations in cancer cell lineages. The output of CancereffectsizeR primarily includes quantified cancer effect sizes (selection intensities) of somatic variants, i.e., how much each mutation contributes to cancer cell proliferation and survival in a given tumor cohort (it produces site-specific mutation rates). Because of the variants being single-nucleotide variants (SNVs), users will see the same start and end points on the chromosome. 
+  </p>
+  <p>
+    This track displays the Cancer Effect Size values (as “Score”) for Breast Cancer (all subtypes). Values have been transformed from the scaled selection coefficients via the transformation \( f(x) = (10.\log(x)) - 10 \).
+  </p>
+  <p>
+    A score of "0" indicates negative selection (not quantified). To transform positive track values back to scaled selection coefficients, use the transformation \( 10^{((y+10)/10)} \), where y is the track value provided. 
+  </p>
+  <h3>Display Conventions and Configuration</h3>
+  <p>The track is presented in bigBed format. The file has the following fields:</p>
+  <!-- You can list fields here if needed -->
+  <h3>Methods</h3>
+  <p>
+    The cancer effect size in CancereffectsizeR is calculated by estimating the neutral mutation rate at each variant site using tissue-specific gene mutation rates and mutational signatures, then comparing the observed mutation rate to this neutral rate. The resulting score, called the selection intensity or cancer effect size, reflects the relative proliferative advantage that a mutation confers to cancer cells.
+  </p>
+  <h3>Contact</h3>
+  <p>Please feel free to contact Dr. Jeffrey P Townsend (<a href="mailto:jeffrey.townsend@yale.edu">jeffrey.townsend@yale.edu</a>) with any questions and/or concerns regarding this track.</p>
+  <h3>References</h3>
+  <p>
+    Mandell JD, Cannataro VL, Townsend JP. Estimation of neutral mutation rates and quantification of somatic variant selection using cancereffectsizeR. Cancer Research. 2023 Feb 15; 83(4):500-505.  
+    <a href="https://www.doi.org/10.1158/0008-5472.CAN-22-1508">doi:10.1158/0008-5472.CAN-22-1508</a>
+  </p>
+</body>
+</html>
