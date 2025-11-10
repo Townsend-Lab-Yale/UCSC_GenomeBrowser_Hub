@@ -5,6 +5,8 @@ type bigBed 5
 bigDataUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/hg38/Breast_cancer_stage(0-IV)_TCGA_CES.bb
 searchIndex name
 visibility full
-useScore 1
+spectrum on
+scoreMin 0
+scoreMax 50
 color 0,0,255
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/Breast_cancer_CancerEffectSize_description.html
