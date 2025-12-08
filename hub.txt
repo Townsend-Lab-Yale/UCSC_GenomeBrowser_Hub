@@ -1,6 +1,6 @@
-hub Breast_cancer_CES_TrackHub
-shortLabel Breast Cancer CES
-longLabel Breast_Cancer – Cancer Effect Size (TCGA, Stage 0–IV)
+hub TCGA_CES_TrackHub
+shortLabel TCGA Cancer Effect Size Tracks
+longLabel Cancer Effect Size tracks across 20 TCGA cancer types
 genomesFile genomes.txt
 email jeffrey.townsend@yale.edu
 descriptionUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/Breast_cancer_CancerEffectSize_description.html
