@@ -5,16 +5,32 @@
   <title>TCGA Cancer Effect Size Track Hub</title>
 </head>
 <body>
-  <h2>TCGA Cancer Effect Size Track Hub</h2>
+  <h2>Description</h2>
   <p>
-    Cancer effect size quantifies natural selection on somatic mutations across <strong>20 TCGA cancer cohorts</strong>. 
-    Each track displays Cancer Effect Size (CES) values from <strong>cancereffectsizeR</strong> - how much each mutation 
-    contributes to cancer cell proliferation in specific tumor types.
+    Cancer effect size is a metric that quantifies the intensity of natural selection on somatic mutations in cancer cell lineages.
+    The output of <strong>CancereffectsizeR</strong> primarily includes quantified cancer effect sizes (selection intensities) of somatic variants,
+    i.e., how much each mutation contributes to cancer cell proliferation and survival in a given tumor cohort
+    (it produces site-specific mutation rates). Because of the variants being single-nucleotide variants (SNVs),
+    users will see that the endpoint coordinate on the chromosome is one greater than the start position.
+  </p>
+  <p>
+    This track displays the Cancer Effect Size values (as "Score") for <strong>20 TCGA cancer cohorts</strong>.
+    Values have been transformed from the scaled selection coefficients via the transformation
+    <em>f(x) = (10 · log(x)) - 10</em>.
+  </p>
+  <p>
+    A positive score indicates positive selection, a score of 1 represents neutral selection,
+    and a score of "0" reflects negative selection (not quantified).
+    To transform positive track values back to scaled selection coefficients, use the transformation
+    <em>10<sup>((y+10)/10)</sup></em>, where <em>y</em> is the track value provided.
+  </p>
+  <p>
+    You can search for specific cancer effect size variants by typing the gene_variant names (e.g., KIF1B_R1320W, PRAMEF1_R434W) in the UCSC Genome Browser search box. These names correspond to the mutation identifiers indexed in this track, enabling quick navigation to relevant variants.
   </p>
 
-  <h3>20 TCGA Cancer Cohorts</h3>
-  <table style="border-collapse: collapse; border: 1px solid #ccc;">
-    <tr><th>TCGA Code</th><th>Cancer Type</th><th>Full Name</th></tr>
+  <h3>20 TCGA Cancer Cohorts Included</h3>
+  <table style="border-collapse: collapse; border: 1px solid #ccc; width:100%;">
+    <tr style="background-color:#f0f0f0;"><th>TCGA Code</th><th>Cancer Type</th><th>Full Name</th></tr>
     <tr><td>BLCA</td><td>Bladder</td><td>Bladder Urothelial Carcinoma</td></tr>
     <tr><td>BRCA</td><td>Breast</td><td>Breast Invasive Carcinoma</td></tr>
     <tr><td>CESC</td><td>Cervical</td><td>Cervical Squamous Cell Carcinoma</td></tr>
@@ -38,27 +54,39 @@
     <tr><td>UCEC</td><td>Uterine</td><td>Uterine Corpus Endometrial Carcinoma</td></tr>
   </table>
 
-  <h3>Display Conventions</h3>
-  <p>Each subtrack shows CES scores transformed via <em>f(x) = (10 · log(x)) - 10</em>:
-    <ul>
-      <li><strong>Positive score</strong> = Positive selection</li>
-      <li><strong>Score = 1</strong> = Neutral selection</li>
-      <li><strong>Score = 0</strong> = Negative selection</li>
-    </ul>
-    Reverse: <em>10<sup>((y+10)/10)</sup></em>
+  <h3>Display Conventions and Configuration</h3>
+  <p>
+    The track is presented in bigBed format. The file has the following fields:
   </p>
-  <p>Search by <strong>gene_variant</strong> names (e.g., <code>KIF1B_R1320W</code>) in UCSC search box.</p>
+  <ul>
+    <li><strong>chrom</strong> – Reference sequence chromosome or scaffold</li>
+    <li><strong>chromStart</strong> – Zero-based start position of the variant (SNV)</li>
+    <li><strong>chromEnd</strong> – End position (exclusive) of the variant (SNV)</li>
+    <li><strong>gene_variant</strong> – Gene and variant identifier</li>
+    <li><strong>Score</strong> – Selection intensity value</li>
+  </ul>
 
   <h3>Methods</h3>
-  <p>CES calculated by cancereffectsizeR: estimates neutral mutation rate per site using tissue-specific 
-  gene mutation rates + mutational signatures, then compares to observed rates [web:36].</p>
+  <p>
+    The cancer effect size in <strong>CancereffectsizeR</strong> is calculated by estimating the neutral mutation rate at each variant site
+    using tissue-specific gene mutation rates and mutational signatures, then comparing the observed mutation rate to this neutral rate.
+    The resulting score, called the selection intensity or cancer effect size, reflects the relative proliferative advantage that a
+    mutation confers to cancer cells.
+  </p>
 
   <h3>Contact</h3>
-  <p>Prarthana Sanjeeva Reddy (Townsend Lab, Yale)<br>
-  PI: Dr. Jeffrey Townsend <a href="mailto:jeffrey.townsend@yale.edu">jeffrey.townsend@yale.edu</a></p>
+  <p>
+    Please feel free to contact Dr. Jeffrey P. Townsend
+    (<a href="mailto:jeffrey.townsend@yale.edu">jeffrey.townsend@yale.edu</a>)
+    with any questions and/or concerns regarding this track.
+  </p>
 
-  <h3>Reference</h3>
-  <p>Mandell JD, et al. <em>Cancer Research</em> 2023. 
-  <a href="https://doi.org/10.1158/0008-5472.CAN-22-1508">doi:10.1158/0008-5472.CAN-22-1508</a></p>
+  <h3>References</h3>
+  <p>
+    Mandell JD, Cannataro VL, Townsend JP.
+    Estimation of neutral mutation rates and quantification of somatic variant selection using cancereffectsizeR.
+    <em>Cancer Research.</em> 2023 Feb 15; 83(4):500–505.
+    <a href="https://doi.org/10.1158/0008-5472.CAN-22-1508">doi:10.1158/0008-5472.CAN-22-1508</a>
+  </p>
 </body>
 </html>
