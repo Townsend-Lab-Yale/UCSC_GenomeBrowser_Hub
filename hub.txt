@@ -3,4 +3,4 @@ shortLabel TCGA Cancer Effect Size Tracks
 longLabel Cancer Effect Size tracks across 20 TCGA cancer types
 genomesFile genomes.txt
 email jeffrey.townsend@yale.edu
-descriptionUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/Breast_cancer_CancerEffectSize_description.html
+descriptionUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_CES_hub_description.html
