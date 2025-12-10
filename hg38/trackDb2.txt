@@ -20,6 +20,7 @@ searchIndex name
 useScore 1
 visibility full
 color 0,0,255
+mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/BRCA_description.html
 
 track BLCA_CES
@@ -34,6 +35,7 @@ spectrum on
 scoreMin 0
 scoreMax 50
 color 0,128,255
+mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/BLCA_description.html
 
 track CESC_CES
@@ -48,6 +50,7 @@ spectrum on
 scoreMin 0
 scoreMax 50
 color 255,0,128
+mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/CESC_description.html
 
 track COAD_CES
@@ -62,6 +65,7 @@ spectrum on
 scoreMin 0
 scoreMax 50
 color 128,0,255
+mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/COAD_description.html
 
 track ESCA_CES
@@ -76,6 +80,7 @@ spectrum on
 scoreMin 0
 scoreMax 50
 color 0,200,200
+mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/ESCA_description.html
 
 track GBM_CES
@@ -90,6 +95,7 @@ spectrum on
 scoreMin 0
 scoreMax 50
 color 200,0,200
+mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/GBM_description.html
 
 track HNSC_CES
@@ -104,6 +110,7 @@ spectrum on
 scoreMin 0
 scoreMax 50
 color 150,75,0
+mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/HNSC_description.html
 
 track KIRC_CES
@@ -118,6 +125,7 @@ spectrum on
 scoreMin 0
 scoreMax 50
 color 0,150,75
+mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/KIRC_description.html
 
 track LGG_CES
@@ -132,6 +140,7 @@ spectrum on
 scoreMin 0
 scoreMax 50
 color 75,0,130
+mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/LGG_description.html
 
 track LIHC_CES
@@ -146,6 +155,7 @@ spectrum on
 scoreMin 0
 scoreMax 50
 color 210,105,30
+mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/LIHC_description.html
 
 track LUAD_CES
@@ -160,6 +170,7 @@ spectrum on
 scoreMin 0
 scoreMax 50
 color 0,191,255
+mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/LUAD_description.html
 
 track DLBC_CES
@@ -174,6 +185,7 @@ spectrum on
 scoreMin 0
 scoreMax 50
 color 46,139,87
+mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/DLBC_description.html
 
 track OV_CES
@@ -188,6 +200,7 @@ spectrum on
 scoreMin 0
 scoreMax 50
 color 199,21,133
+mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/OV_description.html
 
 track PAAD_CES
@@ -202,6 +215,7 @@ spectrum on
 scoreMin 0
 scoreMax 50
 color 255,140,0
+mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/PAAD_description.html
 
 track PRAD_CES
@@ -216,6 +230,7 @@ spectrum on
 scoreMin 0
 scoreMax 50
 color 0,100,0
+mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/PRAD_description.html
 
 track READ_CES
@@ -230,6 +245,7 @@ spectrum on
 scoreMin 0
 scoreMax 50
 color 139,0,0
+mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/READ_description.html
 
 track SKCM_CES
@@ -244,6 +260,7 @@ spectrum on
 scoreMin 0
 scoreMax 50
 color 255,105,180
+mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/SKCM_description.html
 
 track STAD_CES
@@ -258,6 +275,7 @@ spectrum on
 scoreMin 0
 scoreMax 50
 color 218,165,32
+mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/STAD_description.html
 
 track THCA_CES
@@ -272,6 +290,7 @@ spectrum on
 scoreMin 0
 scoreMax 50
 color 135,206,235
+mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/THCA_description.html
 
 track UCEC_CES
@@ -286,4 +305,5 @@ spectrum on
 scoreMin 0
 scoreMax 50
 color 199,155,0
+mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/UCEC_description.html
