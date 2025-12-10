@@ -17,8 +17,10 @@ longLabel BRCA – Breast Invasive Carcinoma TCGA Cancer Effect Size
 type bigBed 5
 bigDataUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/hg38/BRCA_TCGA_CES.bb #change urls 
 searchIndex name
-useScore 1
 visibility full
+spectrum on
+scoreMin 0
+scoreMax 100
 color 0,0,255
 mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/BRCA_description.html
@@ -33,7 +35,7 @@ searchIndex name
 visibility full
 spectrum on
 scoreMin 0
-scoreMax 50
+scoreMax 100
 color 0,128,255
 mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/BLCA_description.html
@@ -48,7 +50,7 @@ searchIndex name
 visibility full
 spectrum on
 scoreMin 0
-scoreMax 50
+scoreMax 100
 color 255,0,128
 mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/CESC_description.html
@@ -63,7 +65,7 @@ searchIndex name
 visibility full
 spectrum on
 scoreMin 0
-scoreMax 50
+scoreMax 100
 color 128,0,255
 mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/COAD_description.html
@@ -78,7 +80,7 @@ searchIndex name
 visibility full
 spectrum on
 scoreMin 0
-scoreMax 50
+scoreMax 100
 color 0,200,200
 mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/ESCA_description.html
@@ -93,7 +95,7 @@ searchIndex name
 visibility full
 spectrum on
 scoreMin 0
-scoreMax 50
+scoreMax 100
 color 200,0,200
 mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/GBM_description.html
@@ -108,7 +110,7 @@ searchIndex name
 visibility full
 spectrum on
 scoreMin 0
-scoreMax 50
+scoreMax 100
 color 150,75,0
 mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/HNSC_description.html
@@ -123,7 +125,7 @@ searchIndex name
 visibility full
 spectrum on
 scoreMin 0
-scoreMax 50
+scoreMax 100
 color 0,150,75
 mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/KIRC_description.html
@@ -138,7 +140,7 @@ searchIndex name
 visibility full
 spectrum on
 scoreMin 0
-scoreMax 50
+scoreMax 100
 color 75,0,130
 mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/LGG_description.html
@@ -153,7 +155,7 @@ searchIndex name
 visibility full
 spectrum on
 scoreMin 0
-scoreMax 50
+scoreMax 100
 color 210,105,30
 mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/LIHC_description.html
@@ -168,7 +170,7 @@ searchIndex name
 visibility full
 spectrum on
 scoreMin 0
-scoreMax 50
+scoreMax 100
 color 0,191,255
 mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/LUAD_description.html
@@ -183,7 +185,7 @@ searchIndex name
 visibility full
 spectrum on
 scoreMin 0
-scoreMax 50
+scoreMax 100
 color 46,139,87
 mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/DLBC_description.html
@@ -198,7 +200,7 @@ searchIndex name
 visibility full
 spectrum on
 scoreMin 0
-scoreMax 50
+scoreMax 100
 color 199,21,133
 mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/OV_description.html
@@ -213,7 +215,7 @@ searchIndex name
 visibility full
 spectrum on
 scoreMin 0
-scoreMax 50
+scoreMax 100
 color 255,140,0
 mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/PAAD_description.html
@@ -228,7 +230,7 @@ searchIndex name
 visibility full
 spectrum on
 scoreMin 0
-scoreMax 50
+scoreMax 100
 color 0,100,0
 mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/PRAD_description.html
@@ -243,7 +245,7 @@ searchIndex name
 visibility full
 spectrum on
 scoreMin 0
-scoreMax 50
+scoreMax 100
 color 139,0,0
 mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/READ_description.html
@@ -258,7 +260,7 @@ searchIndex name
 visibility full
 spectrum on
 scoreMin 0
-scoreMax 50
+scoreMax 100
 color 255,105,180
 mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/SKCM_description.html
@@ -273,7 +275,7 @@ searchIndex name
 visibility full
 spectrum on
 scoreMin 0
-scoreMax 50
+scoreMax 100
 color 218,165,32
 mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/STAD_description.html
@@ -288,7 +290,7 @@ searchIndex name
 visibility full
 spectrum on
 scoreMin 0
-scoreMax 50
+scoreMax 100
 color 135,206,235
 mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/THCA_description.html
@@ -303,7 +305,7 @@ searchIndex name
 visibility full
 spectrum on
 scoreMin 0
-scoreMax 50
+scoreMax 100
 color 199,155,0
 mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/UCEC_description.html
