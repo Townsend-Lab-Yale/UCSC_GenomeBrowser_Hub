@@ -1,6 +1,6 @@
-track Cancer_Effect_Size_TCGA_20_cohorts
-shortLabel Cancer_Effect_Size_20_cohorts
-longLabel Cancer Effect Size across 20 TCGA cancer type cohorts
+track Cancer_Effect_Size_TCGA_20_Cancer_Types
+shortLabel Cancer_Effect_Size_20_Cancer_Types
+longLabel Cancer Effect Size for 20 TCGA cancer type cohorts
 type bigBed 5 +
 compositeTrack on
 allButtonPair on
@@ -11,7 +11,7 @@ type trackList
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_CES_hub_description.html
 
 track BRCA_CES
-parent Cancer_Effect_Size_TCGA_20_cohorts on
+parent Cancer_Effect_Size_TCGA_20_Cancer_Types on
 shortLabel BRCA CES
 longLabel BRCA – Breast Invasive Carcinoma TCGA Cancer Effect Size
 type bigBed 5
@@ -26,7 +26,7 @@ mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_BRCA_description.html
 
 track BLCA_CES
-parent Cancer_Effect_Size_TCGA_20_cohorts on
+parent Cancer_Effect_Size_TCGA_20_Cancer_Types on
 shortLabel BLCA CES
 longLabel BLCA – Bladder Urothelial Carcinoma TCGA Cancer Effect Size
 type bigBed 5
@@ -41,7 +41,7 @@ mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_BLCA_description.html
 
 track CESC_CES
-parent Cancer_Effect_Size_TCGA_20_cohorts on
+parent Cancer_Effect_Size_TCGA_20_Cancer_Types on
 shortLabel CESC CES
 longLabel CESC – Cervical Squamous Cell Carcinoma TCGA Cancer Effect Size
 type bigBed 5
@@ -56,7 +56,7 @@ mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_CESC_description.html
 
 track COAD_CES
-parent Cancer_Effect_Size_TCGA_20_cohorts on
+parent Cancer_Effect_Size_TCGA_20_Cancer_Types on
 shortLabel COAD CES
 longLabel COAD – Colon Adenocarcinoma TCGA Cancer Effect Size
 type bigBed 5
@@ -71,7 +71,7 @@ mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_COAD_description.html
 
 track ESCA_CES
-parent Cancer_Effect_Size_TCGA_20_cohorts on
+parent Cancer_Effect_Size_TCGA_20_Cancer_Types on
 shortLabel ESCA CES
 longLabel ESCA – Esophageal Carcinoma TCGA Cancer Effect Size
 type bigBed 5
@@ -86,7 +86,7 @@ mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_ESCA_description.html
 
 track GBM_CES
-parent Cancer_Effect_Size_TCGA_20_cohorts on
+parent Cancer_Effect_Size_TCGA_20_Cancer_Types on
 shortLabel GBM CES
 longLabel GBM – Glioblastoma Multiforme TCGA Cancer Effect Size
 type bigBed 5
@@ -101,7 +101,7 @@ mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_GBM_description.html
 
 track HNSC_CES
-parent Cancer_Effect_Size_TCGA_20_cohorts on
+parent Cancer_Effect_Size_TCGA_20_Cancer_Types on
 shortLabel HNSC CES
 longLabel HNSC – Head and Neck Squamous Cell Carcinoma TCGA Cancer Effect Size
 type bigBed 5
@@ -116,7 +116,7 @@ mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_HNSC_description.html
 
 track KIRC_CES
-parent Cancer_Effect_Size_TCGA_20_cohorts on
+parent Cancer_Effect_Size_TCGA_20_Cancer_Types on
 shortLabel KIRC CES
 longLabel KIRC – Kidney Renal Clear Cell Carcinoma TCGA Cancer Effect Size
 type bigBed 5
@@ -131,7 +131,7 @@ mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_KIRC_description.html
 
 track LGG_CES
-parent Cancer_Effect_Size_TCGA_20_cohorts on
+parent  Cancer_Effect_Size_TCGA_20_Cancer_Types on
 shortLabel LGG CES
 longLabel LGG – Brain Lower Grade Glioma TCGA Cancer Effect Size
 type bigBed 5
@@ -146,7 +146,7 @@ mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_LGG_description.html
 
 track LIHC_CES
-parent Cancer_Effect_Size_TCGA_20_cohorts on
+parent Cancer_Effect_Size_TCGA_20_Cancer_Types on
 shortLabel LIHC CES
 longLabel LIHC – Liver Hepatocellular Carcinoma TCGA Cancer Effect Size
 type bigBed 5
@@ -161,7 +161,7 @@ mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_LIHC_description.html
 
 track LUAD_CES
-parent Cancer_Effect_Size_TCGA_20_cohorts on
+parent Cancer_Effect_Size_TCGA_20_Cancer_Types on
 shortLabel LUAD CES
 longLabel LUAD – Lung Adenocarcinoma TCGA Cancer Effect Size
 type bigBed 5
@@ -176,7 +176,7 @@ mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_LUAD_description.html
 
 track DLBC_CES
-parent Cancer_Effect_Size_TCGA_20_cohorts on
+parent Cancer_Effect_Size_TCGA_20_Cancer_Types on
 shortLabel DLBC CES
 longLabel DLBC – Lymphoid Neoplasm Diffuse Large B-cell Lymphoma TCGA Cancer Effect Size
 type bigBed 5
@@ -191,7 +191,7 @@ mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_DLBC_description.html
 
 track OV_CES
-parent Cancer_Effect_Size_TCGA_20_cohorts on
+parent Cancer_Effect_Size_TCGA_20_Cancer_Types on
 shortLabel OV CES
 longLabel OV – Ovarian Serous Cystadenocarcinoma TCGA Cancer Effect Size
 type bigBed 5
@@ -206,7 +206,7 @@ mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_OV_description.html
 
 track PAAD_CES
-parent Cancer_Effect_Size_TCGA_20_cohorts on
+parent Cancer_Effect_Size_TCGA_20_Cancer_Types on
 shortLabel PAAD CES
 longLabel PAAD – Pancreatic Adenocarcinoma TCGA Cancer Effect Size
 type bigBed 5
@@ -221,7 +221,7 @@ mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_PAAD_description.html
 
 track PRAD_CES
-parent Cancer_Effect_Size_TCGA_20_cohorts on
+parent Cancer_Effect_Size_TCGA_20_Cancer_Types on
 shortLabel PRAD CES
 longLabel PRAD – Prostate Adenocarcinoma TCGA Cancer Effect Size
 type bigBed 5
@@ -236,7 +236,7 @@ mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_PRAD_description.html
 
 track READ_CES
-parent Cancer_Effect_Size_TCGA_20_cohorts on
+parent Cancer_Effect_Size_TCGA_20_Cancer_Types on
 shortLabel READ CES
 longLabel READ – Rectum Adenocarcinoma TCGA Cancer Effect Size
 type bigBed 5
@@ -251,7 +251,7 @@ mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_READ_description.html
 
 track SKCM_Pimary_CES
-parent Cancer_Effect_Size_TCGA_20_cohorts on
+parent Cancer_Effect_Size_TCGA_20_Cancer_Types on
 shortLabel SKCM PRIM CES
 longLabel SKCM – Skin Cutaneous Melanoma_Primary_TCGA Cancer Effect Size
 type bigBed 5
@@ -266,7 +266,7 @@ mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_SKCM_primary_description.html
 
 track SKCM_Metastatic_CES
-parent Cancer_Effect_Size_TCGA_20_cohorts on
+parent Cancer_Effect_Size_TCGA_20_Cancer_Types on
 shortLabel SKCM Met CES
 longLabel SKCM – Skin Cutaneous Melanoma_Metastatic_TCGA Cancer Effect Size
 type bigBed 5
@@ -281,7 +281,7 @@ mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_SKCM_metastatic_description.html
 
 track STAD_CES
-parent Cancer_Effect_Size_TCGA_20_cohorts on
+parent Cancer_Effect_Size_TCGA_20_Cancer_Types on
 shortLabel STAD CES
 longLabel STAD – Stomach Adenocarcinoma TCGA Cancer Effect Size
 type bigBed 5
@@ -296,7 +296,7 @@ mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_STAD_description.html
 
 track THCA_CES
-parent Cancer_Effect_Size_TCGA_20_cohorts on
+parent Cancer_Effect_Size_TCGA_20_Cancer_Types on
 shortLabel THCA CES
 longLabel THCA – Thyroid Carcinoma TCGA Cancer Effect Size
 type bigBed 5
@@ -311,7 +311,7 @@ mouseOver variant name: \$name; effect size: \$score
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_THCA_description.html
 
 track UCEC_CES
-parent Cancer_Effect_Size_TCGA_20_cohorts on
+parent Cancer_Effect_Size_TCGA_20_Cancer_Types on
 shortLabel UCEC CES
 longLabel UCEC – Uterine Corpus Endometrial Carcinoma TCGA Cancer Effect Size
 type bigBed 5
