@@ -1,0 +1,7 @@
+data/raw/
+outputs/
+*.rds
+*.bed
+*.bb
+*.log
+*.tmp
