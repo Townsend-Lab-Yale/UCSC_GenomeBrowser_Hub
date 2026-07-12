@@ -19,11 +19,7 @@
     <em>f</em>(<em>γ</em>) = (10 · log(<em>γ</em>)) − 10.
   </p>
   <p>
-    A positive score indicates positive selection, a score of 1 represents neutral selection,
-    and a score of "0" reflects negative selection (not quantified).
-    To transform positive track values back to scaled selection coefficients, use the transformation
-    10<sup>((<em>s</em>+10)/10)</sup>, where <em>s</em> is the track value provided.
-  </p>
+    A score of -10 represents neutral selection. Scores greater than -10 indicate positive selection, with larger scores indicating stronger positive selection. Scores less than -10 indicate negative selection, with more negative scores indicating stronger negative selection. To transform track values back to scaled selection coefficients, use the transformation 10<sup>((<em>s</em>+10)/10)</sup>, where <em>s</em> is the track value provided.  </p>
   <p>
     You can search for specific cancer effect size variants by typing the gene_variant names (e.g., CDK4_K22M, TTN_T4227A) in the UCSC Genome Browser search box. These names correspond to the mutation identifiers indexed in this track, enabling quick navigation to relevant variants.
   </p>
