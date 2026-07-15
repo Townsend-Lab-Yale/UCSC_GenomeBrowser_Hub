@@ -5,3 +5,4 @@ outputs/
 *.bb
 *.log
 *.tmp
+hg38/*.bb.bak
