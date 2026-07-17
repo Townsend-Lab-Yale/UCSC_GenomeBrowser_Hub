@@ -55,44 +55,6 @@ cesa <- trinuc_mutation_rates(
 cesa <- gene_mutation_rates(cesa, covariates = ces.refset.hg38$covariates$breast)
 cesa <- ces_variant(cesa = cesa, run_name = "recurrents")
 
-group1 <- cesa$variants[c("PIK3CA E545K", "AKT1 E17K"), variant_id, on = "variant_name"]
-group2 <- cesa$variants[c("PIK3CA E545K", "PIK3CA E542K"), variant_id, on = "variant_name"]
-
-cesa <- ces_epistasis(
-  cesa = cesa,
-  variants = list(group1, group2),
-  conf = 0.95,
-  run_name = "variant_epistasis_example"
-)
-
-top_pik3ca <- cesa$variants[gene == "PIK3CA" & maf_prevalence > 1]
-top_akt1 <- cesa$variants[variant_name == "AKT1 E17K"]
-compound_variants <- define_compound_variants(
-  cesa = cesa,
-  variant_table = rbind(top_pik3ca, top_akt1),
-  by = "gene",
-  merge_distance = Inf
-)
-
-cesa <- ces_epistasis(
-  cesa = cesa,
-  variants = compound_variants,
-  run_name = "AKT1_E17K_vs_PIK3CA"
-)
-
-genes <- c("AKT1", "PIK3CA", "TP53")
-combined_coverage <- intersect(
-  cesa$coverage_ranges$exome$`exome+`,
-  cesa$coverage_ranges$targeted$top_genes
-)
-selected_variants <- select_variants(cesa, genes = genes, gr = combined_coverage)
-cesa <- ces_gene_epistasis(
-  cesa = cesa,
-  genes = genes,
-  variants = selected_variants,
-  run_name = "gene_epistasis_example"
-)
-
 save_cesa(cesa = cesa, filename = "outputs/analysis/brca_ces_analysis.rds")
 
 fwrite(

@@ -42,6 +42,7 @@ bash scripts/04_bed_to_bigbed.sh \
 ## BRCA workflow notes
 
 1. The analysis uses `cancereffectsizeR` with `ces.refset.hg38`.
-2. Coordinate-style recurrent variants are parsed directly from `variant_name`.
-3. Gene-level variants are mapped to the first matching gene interval in `ces.refset.hg38$gr_genes`.
-4. The UCSC score is computed as `round(10 * log10(selection_intensity) - 10)` and clipped to the supported BED score range.
+2. The hub contains only recurrent-variant cancer effect size results from `ces_variant`; it does not include epistasis analyses.
+3. Coordinate-style recurrent variants are parsed directly from `variant_name`.
+4. Gene-level variants are mapped to the first matching gene interval in `ces.refset.hg38$gr_genes`.
+5. The UCSC score is computed as `round(10 * log10(selection_intensity) - 10)` and clipped to the supported BED score range.
