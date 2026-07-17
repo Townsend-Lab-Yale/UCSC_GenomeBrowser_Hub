@@ -21,6 +21,13 @@
   <p>
     A score of -10 represents neutral selection. Scores greater than -10 indicate positive selection, with larger scores indicating stronger positive selection. Scores less than -10 indicate negative selection, with more negative scores indicating stronger negative selection. To transform track values back to scaled selection coefficients, use the transformation 10<sup>((<em>s</em>+10)/10)</sup>, where <em>s</em> is the track value provided.  </p>
   <p>
+    Consistent with established cancereffectsizeR practice, this track includes only <strong>recurrently mutated
+    single-nucleotide variants</strong> (i.e., variants observed in two or more tumors within this cohort).
+    Reliable estimation of site-specific selection intensity requires sufficient observations at a site to
+    distinguish selective signal from stochastic variation in the underlying neutral mutation process; non-recurrent
+    (singleton) variants are therefore not represented in this track (Mandell et al., <em>Cancer Research</em>, 2023).
+  </p>
+  <p>
     You can search for specific cancer effect size variants by typing the gene_variant names (e.g., NOP2_D147A, NFASC_D733A) in the UCSC Genome Browser search box. These names correspond to the mutation identifiers indexed in this track, enabling quick navigation to relevant variants.
   </p>
 
