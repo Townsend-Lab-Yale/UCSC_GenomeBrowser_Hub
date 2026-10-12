@@ -14,12 +14,23 @@
     users will see that the endpoint coordinate on the chromosome is one greater than the start position.
   </p>
   <p>
-    This track displays the Cancer Effect Size values (as "Score") for <strong>PRAD (Prostate Adenocarcinoma)</strong>.
-    Values have been transformed from the scaled selection coefficients via the transformation
-    <em>f</em>(<em>γ</em>) = (10 · log(<em>γ</em>)) − 10.
+    Each variant is shown with its <strong>cancer effect size</strong> (scaled selection coefficient, <em>&gamma;</em>). For display and shading,
+    <em>&gamma;</em> is transformed as <em>s</em> = 10&nbsp;&middot;&nbsp;log<sub>10</sub>(<em>&gamma;</em>)&nbsp;&minus;&nbsp;10, so neutral
+    selection (<em>&gamma;</em>&nbsp;=&nbsp;1) corresponds to <em>s</em>&nbsp;=&nbsp;&minus;10 and larger <em>s</em> means stronger positive selection.
+    The inverse is <em>&gamma;</em>&nbsp;=&nbsp;10<sup>(<em>s</em>+10)/10</sup>.
   </p>
   <p>
-    A score of -10 represents neutral selection. Scores greater than -10 indicate positive selection, with larger scores indicating stronger positive selection. Scores less than -10 indicate negative selection, with more negative scores indicating stronger negative selection. To transform track values back to scaled selection coefficients, use the transformation 10<sup>((<em>s</em>+10)/10)</sup>, where <em>s</em> is the track value provided.  </p>
+    <strong>You do not need to back-transform anything.</strong> Hovering over a variant shows its consequence, the cancer effect size
+    <em>&gamma;</em>, the transformed score marked with an asterisk (<em>s</em>*) so it is not mistaken for <em>&gamma;</em>, and the number of
+    TCGA patients carrying the variant. Example: <em>TP53_R175H (missense) | cancer effect size gamma = 2,500 | transformed score s* = 24 |
+    TCGA patients with variant: 2</em>.
+  </p>
+  <p>
+    <strong>Why scores are never negative.</strong> The bigBed format requires the standard BED <em>score</em> field to be a whole number from
+    0 to 1000. The transformed score is therefore rounded, and values below 0 (<em>&gamma;</em>&nbsp;&lt;&nbsp;10, including neutral or negative
+    selection) are stored as 0 and shown as &ldquo;gamma = &lt;10&rdquo;. Because the tracks contain only recurrent variants, which are
+    predominantly under positive selection, this is rare. Because <em>s</em> is rounded, <em>&gamma;</em> is approximate (within about &plusmn;12%).
+  </p>
   <p>
     Consistent with established cancereffectsizeR practice, this track includes only <strong>recurrently mutated
     single-nucleotide variants</strong> (i.e., variants observed in two or more tumors within this cohort).
@@ -31,16 +42,29 @@
     You can search for specific cancer effect size variants by typing the gene_variant names (e.g., SPOP_W131G, GDAP2_V387G) in the UCSC Genome Browser search box. These names correspond to the mutation identifiers indexed in this track, enabling quick navigation to relevant variants.
   </p>
 
+  <h3>Silent (synonymous) and other variant classes</h3>
+  <p>
+    Each variant is labeled with its consequence: <em>missense</em>, <em>silent</em> (synonymous, e.g. CLCNKA_I436I), <em>nonsense</em>,
+    <em>stop_lost</em> or <em>noncoding</em>. The label appears on hover and on the item details page. To hide silent mutations, click the
+    track name (or right-click the track and choose &ldquo;Configure&rdquo;), uncheck &ldquo;silent&rdquo; under <em>Variant consequence</em>, and click
+    Submit. Silent variants are kept because cancereffectsizeR estimates their effect sizes in the same way as other variants; a high
+    <em>&gamma;</em> for a silent variant may reflect selection acting through splicing or gene regulation, or an underestimated local mutation
+    rate, and should be interpreted with that in mind.
+  </p>
+
   <h3>Display Conventions and Configuration</h3>
   <p>
     The track is presented in bigBed format. The file has the following fields:
   </p>
   <ul>
-    <li><strong>chrom</strong> – Reference sequence chromosome or scaffold</li>
-    <li><strong>chromStart</strong> – Zero-based start position of the variant (SNV)</li>
-    <li><strong>chromEnd</strong> – End position (exclusive) of the variant (SNV)</li>
-    <li><strong>gene_variant</strong> – Gene and variant identifier</li>
-    <li><strong>Score</strong> – Selection intensity value</li>
+    <li><strong>chrom</strong> &ndash; Reference sequence chromosome</li>
+    <li><strong>chromStart</strong> &ndash; Zero-based start position of the variant (SNV)</li>
+    <li><strong>chromEnd</strong> &ndash; End position (exclusive) of the variant (SNV)</li>
+    <li><strong>name</strong> &ndash; Variant identifier, GENE_AACHANGE (coding) or chr:pos_ref&gt;alt (noncoding)</li>
+    <li><strong>score</strong> &ndash; Transformed score <em>s</em>, rounded (values below 0 stored as 0)</li>
+    <li><strong>gamma</strong> &ndash; Cancer effect size <em>&gamma;</em> = 10<sup>(<em>s</em>+10)/10</sup> (&ldquo;&lt;10&rdquo; when <em>s</em> is stored as 0)</li>
+    <li><strong>n_patients</strong> &ndash; Number of TCGA patients in the cohort carrying the variant</li>
+    <li><strong>consequence</strong> &ndash; missense, silent, nonsense, stop_lost or noncoding</li>
   </ul>
 
   <h3>Methods</h3>

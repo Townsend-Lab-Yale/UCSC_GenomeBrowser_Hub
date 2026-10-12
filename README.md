@@ -17,6 +17,7 @@ It also includes a minimal reproducible **BRCA** workflow in `scripts/` for:
 | `scripts/02_run_brca_ces_analysis.R` | Recreates the BRCA `cesa` object |
 | `scripts/03_build_bed_tracks.R` | Builds the BRCA BED outputs from recurrent CES results |
 | `scripts/04_bed_to_bigbed.sh` | Converts BED to bigBed with UCSC `bedToBigBed` |
+| `scripts/tcga_ces.as` | autoSql schema of the hub bigBed files |
 
 ## Required local inputs
 
@@ -33,16 +34,45 @@ If `TCGA-BRCA.maf.gz` is absent, the workflow downloads it automatically.
 Rscript scripts/01_install_dependencies.R
 Rscript scripts/02_run_brca_ces_analysis.R
 Rscript scripts/03_build_bed_tracks.R
-bash scripts/04_bed_to_bigbed.sh \
-  outputs/tracks/BRCA_CES_All_mapped_ucsc.bed \
-  data/raw/hg38.chrom.sizes \
-  hg38/Breast_cancer_stage(0-IV)_TCGA_CES.bb
 ```
+
+## Track contents
+
+Each cohort track contains recurrent variants only (carried by at least 2 TCGA patients of the cohort).
+The autoSql schema of the track files is in `scripts/tcga_ces.as`.
+
+Track columns: chrom, chromStart, chromEnd, name, score, gamma, n_patients, consequence.
+`score` is the transformed score s = 10*log10(gamma) - 10, rounded; bigBed requires 0-1000, so s < 0 is stored as 0
+(shown as gamma "<10"). The two SKCM tracks keep their original five columns.
+
+## Command-line access (copy and paste)
+
+Requires `curl` and the UCSC tool `bigBedToBed`
+(download from <https://hgdownload.soe.ucsc.edu/admin/exe/>, then `chmod +x bigBedToBed`).
+Each command is a single line. The first line stores the hub address in a variable used by the others.
+
+```bash
+HUB=https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/hg38
+
+# 1. list the data file of every cohort track
+curl -s $HUB/trackDb.txt | awk '$1=="bigDataUrl" {print $2}'
+
+# 2. download one cohort (here BRCA) and convert it to text (BED)
+curl -O $HUB/TCGA_BRCA_CES.bb
+bigBedToBed TCGA_BRCA_CES.bb TCGA_BRCA_CES.bed
+
+# 3. only chromosome 17, or only the TP53 region
+bigBedToBed -chrom=chr17 TCGA_BRCA_CES.bb TCGA_BRCA_chr17.bed
+bigBedToBed -chrom=chr17 -start=7668401 -end=7687550 TCGA_BRCA_CES.bb TP53.bed
+
+# 4. one variant by name
+grep -w "TP53_R175H" TCGA_BRCA_CES.bed
+```
+
+File names contain no spaces or parentheses, so they can be pasted into any shell without quoting.
 
 ## BRCA workflow notes
 
 1. The analysis uses `cancereffectsizeR` with `ces.refset.hg38`.
 2. The hub contains only recurrent-variant cancer effect size results from `ces_variant`; it does not include epistasis analyses.
 3. Coordinate-style recurrent variants are parsed directly from `variant_name`.
-4. Gene-level variants are mapped to the first matching gene interval in `ces.refset.hg38$gr_genes`.
-5. The UCSC score is computed as `round(10 * log10(selection_intensity) - 10)` and clipped to the supported BED score range.
