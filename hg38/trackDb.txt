@@ -12,240 +12,272 @@ track BRCA_CES
 parent Cancer_Effect_Size_TCGA_20_Cancer_Types on
 shortLabel BRCA CES
 longLabel BRCA – Breast Invasive Carcinoma TCGA Cancer Effect Size
-type bigBed 5
-bigDataUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/hg38/Breast_cancer_stage(0-IV)_TCGA_CES.bb
+type bigBed 5 +
+bigDataUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/hg38/TCGA_BRCA_CES.bb
 searchIndex name
 visibility full
 spectrum on
 scoreMin 0
 scoreMax 100
 color 0,0,255
-mouseOver variant name: $name; effect size: $score
+mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score s* = $score | TCGA patients with variant: $n_patients | *s = 10*log10(gamma) - 10, not gamma
+filterValues.consequence missense,nonsense,silent,stop_lost,noncoding
+filterLabel.consequence Variant consequence (uncheck "silent" to hide silent mutations)
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_BRCA_description.html
 
 track BLCA_CES
 parent Cancer_Effect_Size_TCGA_20_Cancer_Types on
 shortLabel BLCA CES
 longLabel BLCA – Bladder Urothelial Carcinoma TCGA Cancer Effect Size
-type bigBed 5
-bigDataUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/hg38/Bladder_Urothelial_Carcinoma_stage0-IV_TCGA_CES.bb
+type bigBed 5 +
+bigDataUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/hg38/TCGA_BLCA_CES.bb
 searchIndex name
 visibility full
 spectrum on
 scoreMin 0
 scoreMax 100
 color 0,128,255
-mouseOver variant name: $name; effect size: $score
+mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score s* = $score | TCGA patients with variant: $n_patients | *s = 10*log10(gamma) - 10, not gamma
+filterValues.consequence missense,nonsense,silent,stop_lost,noncoding
+filterLabel.consequence Variant consequence (uncheck "silent" to hide silent mutations)
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_BLCA_description.html
 
 track CESC_CES
 parent Cancer_Effect_Size_TCGA_20_Cancer_Types on
 shortLabel CESC CES
 longLabel CESC – Cervical Squamous Cell Carcinoma TCGA Cancer Effect Size
-type bigBed 5
-bigDataUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/hg38/Cervical_Squamous_Cell_Carcinoma_and_Endocervical_Adenocarcinoma_stage(I-IV)_TCGA_CES.bb
+type bigBed 5 +
+bigDataUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/hg38/TCGA_CESC_CES.bb
 searchIndex name
 visibility full
 spectrum on
 scoreMin 0
 scoreMax 100
 color 255,0,128
-mouseOver variant name: $name; effect size: $score
+mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score s* = $score | TCGA patients with variant: $n_patients | *s = 10*log10(gamma) - 10, not gamma
+filterValues.consequence missense,nonsense,silent,stop_lost,noncoding
+filterLabel.consequence Variant consequence (uncheck "silent" to hide silent mutations)
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_CESC_description.html
 
 track COAD_CES
 parent Cancer_Effect_Size_TCGA_20_Cancer_Types on
 shortLabel COAD CES
 longLabel COAD – Colon Adenocarcinoma TCGA Cancer Effect Size
-type bigBed 5
-bigDataUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/hg38/Colon_Adenocarcinomastage(I-IV)_TCGA_CES.bb
+type bigBed 5 +
+bigDataUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/hg38/TCGA_COAD_CES.bb
 searchIndex name
 visibility full
 spectrum on
 scoreMin 0
 scoreMax 100
 color 128,0,255
-mouseOver variant name: $name; effect size: $score
+mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score s* = $score | TCGA patients with variant: $n_patients | *s = 10*log10(gamma) - 10, not gamma
+filterValues.consequence missense,nonsense,silent,stop_lost,noncoding
+filterLabel.consequence Variant consequence (uncheck "silent" to hide silent mutations)
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_COAD_description.html
 
 track ESCA_CES
 parent Cancer_Effect_Size_TCGA_20_Cancer_Types on
 shortLabel ESCA CES
 longLabel ESCA – Esophageal Carcinoma TCGA Cancer Effect Size
-type bigBed 5
-bigDataUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/hg38/Esophageal_Carcinoma_stage(I-IV)_TCGA_CES.bb
+type bigBed 5 +
+bigDataUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/hg38/TCGA_ESCA_CES.bb
 searchIndex name
 visibility full
 spectrum on
 scoreMin 0
 scoreMax 100
 color 0,200,200
-mouseOver variant name: $name; effect size: $score
+mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score s* = $score | TCGA patients with variant: $n_patients | *s = 10*log10(gamma) - 10, not gamma
+filterValues.consequence missense,nonsense,silent,stop_lost,noncoding
+filterLabel.consequence Variant consequence (uncheck "silent" to hide silent mutations)
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_ESCA_description.html
 
 track GBM_CES
 parent Cancer_Effect_Size_TCGA_20_Cancer_Types on
 shortLabel GBM CES
 longLabel GBM – Glioblastoma Multiforme TCGA Cancer Effect Size
-type bigBed 5
-bigDataUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/hg38/Glioblastoma_Multiforme_TCGA_CES.bb
+type bigBed 5 +
+bigDataUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/hg38/TCGA_GBM_CES.bb
 searchIndex name
 visibility full
 spectrum on
 scoreMin 0
 scoreMax 100
 color 200,0,200
-mouseOver variant name: $name; effect size: $score
+mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score s* = $score | TCGA patients with variant: $n_patients | *s = 10*log10(gamma) - 10, not gamma
+filterValues.consequence missense,nonsense,silent,stop_lost,noncoding
+filterLabel.consequence Variant consequence (uncheck "silent" to hide silent mutations)
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_GBM_description.html
 
 track HNSC_CES
 parent Cancer_Effect_Size_TCGA_20_Cancer_Types on
 shortLabel HNSC CES
 longLabel HNSC – Head and Neck Squamous Cell Carcinoma TCGA Cancer Effect Size
-type bigBed 5
-bigDataUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/hg38/Head_and_Neck_Squamous_Cell_Carcinoma_stage(O-IV)_TCGA_CES.bb
+type bigBed 5 +
+bigDataUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/hg38/TCGA_HNSC_CES.bb
 searchIndex name
 visibility full
 spectrum on
 scoreMin 0
 scoreMax 100
 color 150,75,0
-mouseOver variant name: $name; effect size: $score
+mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score s* = $score | TCGA patients with variant: $n_patients | *s = 10*log10(gamma) - 10, not gamma
+filterValues.consequence missense,nonsense,silent,stop_lost,noncoding
+filterLabel.consequence Variant consequence (uncheck "silent" to hide silent mutations)
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_HNSC_description.html
 
 track KIRC_CES
 parent Cancer_Effect_Size_TCGA_20_Cancer_Types on
 shortLabel KIRC CES
 longLabel KIRC – Kidney Renal Clear Cell Carcinoma TCGA Cancer Effect Size
-type bigBed 5
-bigDataUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/hg38/Kidney_Renal_Clear_Cell_Carcinoma_stage(I-IV)_TCGA_CES.bb
+type bigBed 5 +
+bigDataUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/hg38/TCGA_KIRC_CES.bb
 searchIndex name
 visibility full
 spectrum on
 scoreMin 0
 scoreMax 100
 color 0,150,75
-mouseOver variant name: $name; effect size: $score
+mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score s* = $score | TCGA patients with variant: $n_patients | *s = 10*log10(gamma) - 10, not gamma
+filterValues.consequence missense,nonsense,silent,stop_lost,noncoding
+filterLabel.consequence Variant consequence (uncheck "silent" to hide silent mutations)
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_KIRC_description.html
 
 track LGG_CES
 parent  Cancer_Effect_Size_TCGA_20_Cancer_Types on
 shortLabel LGG CES
 longLabel LGG – Brain Lower Grade Glioma TCGA Cancer Effect Size
-type bigBed 5
-bigDataUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/hg38/Brain_Lower_Grade_Glioma_TCA_CES.bb
+type bigBed 5 +
+bigDataUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/hg38/TCGA_LGG_CES.bb
 searchIndex name
 visibility full
 spectrum on
 scoreMin 0
 scoreMax 100
 color 75,0,130
-mouseOver variant name: $name; effect size: $score
+mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score s* = $score | TCGA patients with variant: $n_patients | *s = 10*log10(gamma) - 10, not gamma
+filterValues.consequence missense,nonsense,silent,stop_lost,noncoding
+filterLabel.consequence Variant consequence (uncheck "silent" to hide silent mutations)
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_LGG_description.html
 
 track LIHC_CES
 parent Cancer_Effect_Size_TCGA_20_Cancer_Types on
 shortLabel LIHC CES
 longLabel LIHC – Liver Hepatocellular Carcinoma TCGA Cancer Effect Size
-type bigBed 5
-bigDataUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/hg38/Liver_Hepatocellular_Carcinoma_stage(0-IV)_TCGA_CES.bb
+type bigBed 5 +
+bigDataUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/hg38/TCGA_LIHC_CES.bb
 searchIndex name
 visibility full
 spectrum on
 scoreMin 0
 scoreMax 100
 color 210,105,30
-mouseOver variant name: $name; effect size: $score
+mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score s* = $score | TCGA patients with variant: $n_patients | *s = 10*log10(gamma) - 10, not gamma
+filterValues.consequence missense,nonsense,silent,stop_lost,noncoding
+filterLabel.consequence Variant consequence (uncheck "silent" to hide silent mutations)
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_LIHC_description.html
 
 track LUAD_CES
 parent Cancer_Effect_Size_TCGA_20_Cancer_Types on
 shortLabel LUAD CES
 longLabel LUAD – Lung Adenocarcinoma TCGA Cancer Effect Size
-type bigBed 5
-bigDataUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/hg38/Lung_Adenocarcinoma_stage(I-IV)_TCGA_CES.bb
+type bigBed 5 +
+bigDataUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/hg38/TCGA_LUAD_CES.bb
 searchIndex name
 visibility full
 spectrum on
 scoreMin 0
 scoreMax 100
 color 0,191,255
-mouseOver variant name: $name; effect size: $score
+mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score s* = $score | TCGA patients with variant: $n_patients | *s = 10*log10(gamma) - 10, not gamma
+filterValues.consequence missense,nonsense,silent,stop_lost,noncoding
+filterLabel.consequence Variant consequence (uncheck "silent" to hide silent mutations)
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_LUAD_description.html
 
 track DLBC_CES
 parent Cancer_Effect_Size_TCGA_20_Cancer_Types on
 shortLabel DLBC CES
 longLabel DLBC – Lymphoid Neoplasm Diffuse Large B-cell Lymphoma TCGA Cancer Effect Size
-type bigBed 5
-bigDataUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/hg38/Lymphoid_Neoplasm_Diffuse_Large_B-cell_Lymphoma_stage(I-IV)_TCGA_CES.bb
+type bigBed 5 +
+bigDataUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/hg38/TCGA_DLBC_CES.bb
 searchIndex name
 visibility full
 spectrum on
 scoreMin 0
 scoreMax 100
 color 46,139,87
-mouseOver variant name: $name; effect size: $score
+mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score s* = $score | TCGA patients with variant: $n_patients | *s = 10*log10(gamma) - 10, not gamma
+filterValues.consequence missense,nonsense,silent,stop_lost,noncoding
+filterLabel.consequence Variant consequence (uncheck "silent" to hide silent mutations)
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_DLBC_description.html
 
 track OV_CES
 parent Cancer_Effect_Size_TCGA_20_Cancer_Types on
 shortLabel OV CES
 longLabel OV – Ovarian Serous Cystadenocarcinoma TCGA Cancer Effect Size
-type bigBed 5
-bigDataUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/hg38/Ovarian_Serous_Cystadenocarcinoma_stage(I-IV)_TCGA_CES.bb
+type bigBed 5 +
+bigDataUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/hg38/TCGA_OV_CES.bb
 searchIndex name
 visibility full
 spectrum on
 scoreMin 0
 scoreMax 100
 color 199,21,133
-mouseOver variant name: $name; effect size: $score
+mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score s* = $score | TCGA patients with variant: $n_patients | *s = 10*log10(gamma) - 10, not gamma
+filterValues.consequence missense,nonsense,silent,stop_lost,noncoding
+filterLabel.consequence Variant consequence (uncheck "silent" to hide silent mutations)
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_OV_description.html
 
 track PAAD_CES
 parent Cancer_Effect_Size_TCGA_20_Cancer_Types on
 shortLabel PAAD CES
 longLabel PAAD – Pancreatic Adenocarcinoma TCGA Cancer Effect Size
-type bigBed 5
-bigDataUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/hg38/Pancreatic_Adenocarcinoma_stage(0-IV)_TCGA_CES.bb
+type bigBed 5 +
+bigDataUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/hg38/TCGA_PAAD_CES.bb
 searchIndex name
 visibility full
 spectrum on
 scoreMin 0
 scoreMax 100
 color 255,140,0
-mouseOver variant name: $name; effect size: $score
+mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score s* = $score | TCGA patients with variant: $n_patients | *s = 10*log10(gamma) - 10, not gamma
+filterValues.consequence missense,nonsense,silent,stop_lost,noncoding
+filterLabel.consequence Variant consequence (uncheck "silent" to hide silent mutations)
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_PAAD_description.html
 
 track PRAD_CES
 parent Cancer_Effect_Size_TCGA_20_Cancer_Types on
 shortLabel PRAD CES
 longLabel PRAD – Prostate Adenocarcinoma TCGA Cancer Effect Size
-type bigBed 5
-bigDataUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/hg38/Prostate_Adenocarcinoma_stage(0-III)_TCGA_CES.bb
+type bigBed 5 +
+bigDataUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/hg38/TCGA_PRAD_CES.bb
 searchIndex name
 visibility full
 spectrum on
 scoreMin 0
 scoreMax 100
 color 0,100,0
-mouseOver variant name: $name; effect size: $score
+mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score s* = $score | TCGA patients with variant: $n_patients | *s = 10*log10(gamma) - 10, not gamma
+filterValues.consequence missense,nonsense,silent,stop_lost,noncoding
+filterLabel.consequence Variant consequence (uncheck "silent" to hide silent mutations)
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_PRAD_description.html
 
 track READ_CES
 parent Cancer_Effect_Size_TCGA_20_Cancer_Types on
 shortLabel READ CES
 longLabel READ – Rectum Adenocarcinoma TCGA Cancer Effect Size
-type bigBed 5
-bigDataUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/hg38/Rectum_Adenocarcinoma_stage(I-IV)_TCGA_CES.bb
+type bigBed 5 +
+bigDataUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/hg38/TCGA_READ_CES.bb
 searchIndex name
 visibility full
 spectrum on
 scoreMin 0
 scoreMax 100
 color 139,0,0
-mouseOver variant name: $name; effect size: $score
+mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score s* = $score | TCGA patients with variant: $n_patients | *s = 10*log10(gamma) - 10, not gamma
+filterValues.consequence missense,nonsense,silent,stop_lost,noncoding
+filterLabel.consequence Variant consequence (uncheck "silent" to hide silent mutations)
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_READ_description.html
 
 track SKCM_Pimary_CES
@@ -253,14 +285,14 @@ parent Cancer_Effect_Size_TCGA_20_Cancer_Types on
 shortLabel SKCM PRIM CES
 longLabel SKCM – Skin Cutaneous Melanoma_Primary_TCGA Cancer Effect Size
 type bigBed 5
-bigDataUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/hg38/Skin_Cutaneous_Melanoma_Primary_TCGA_CES.bb
+bigDataUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/hg38/TCGA_SKCM_primary_CES.bb
 searchIndex name
 visibility full
 spectrum on
 scoreMin 0
 scoreMax 100
 color 255,105,180
-mouseOver variant name: $name; effect size: $score
+mouseOver $name | display score* = $score | *transformed value, not the cancer effect size
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_SKCM_primary_description.html
 
 track SKCM_Metastatic_CES
@@ -268,57 +300,63 @@ parent Cancer_Effect_Size_TCGA_20_Cancer_Types on
 shortLabel SKCM Met CES
 longLabel SKCM – Skin Cutaneous Melanoma_Metastatic_TCGA Cancer Effect Size
 type bigBed 5
-bigDataUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/hg38/Skin_Cutaneous_Melanoma_Metastatic_TCGA_CES.bb
+bigDataUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/hg38/TCGA_SKCM_metastatic_CES.bb
 searchIndex name
 visibility full
 spectrum on
 scoreMin 0
 scoreMax 100
 color 255,105,180
-mouseOver variant name: $name; effect size: $score
+mouseOver $name | display score* = $score | *transformed value, not the cancer effect size
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_SKCM_metastatic_description.html
 
 track STAD_CES
 parent Cancer_Effect_Size_TCGA_20_Cancer_Types on
 shortLabel STAD CES
 longLabel STAD – Stomach Adenocarcinoma TCGA Cancer Effect Size
-type bigBed 5
-bigDataUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/hg38/Stomach_Adenocarcinoma_stage(I-IV)_TCGA_CES.bb
+type bigBed 5 +
+bigDataUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/hg38/TCGA_STAD_CES.bb
 searchIndex name
 visibility full
 spectrum on
 scoreMin 0
 scoreMax 100
 color 218,165,32
-mouseOver variant name: $name; effect size: $score
+mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score s* = $score | TCGA patients with variant: $n_patients | *s = 10*log10(gamma) - 10, not gamma
+filterValues.consequence missense,nonsense,silent,stop_lost,noncoding
+filterLabel.consequence Variant consequence (uncheck "silent" to hide silent mutations)
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_STAD_description.html
 
 track THCA_CES
 parent Cancer_Effect_Size_TCGA_20_Cancer_Types on
 shortLabel THCA CES
 longLabel THCA – Thyroid Carcinoma TCGA Cancer Effect Size
-type bigBed 5
-bigDataUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/hg38/Thyroid_Carcinoma_stage(0-IV)_TCGA_CES.bb
+type bigBed 5 +
+bigDataUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/hg38/TCGA_THCA_CES.bb
 searchIndex name
 visibility full
 spectrum on
 scoreMin 0
 scoreMax 100
 color 135,206,235
-mouseOver variant name: $name; effect size: $score
+mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score s* = $score | TCGA patients with variant: $n_patients | *s = 10*log10(gamma) - 10, not gamma
+filterValues.consequence missense,nonsense,silent,stop_lost,noncoding
+filterLabel.consequence Variant consequence (uncheck "silent" to hide silent mutations)
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_THCA_description.html
 
 track UCEC_CES
 parent Cancer_Effect_Size_TCGA_20_Cancer_Types on
 shortLabel UCEC CES
 longLabel UCEC – Uterine Corpus Endometrial Carcinoma TCGA Cancer Effect Size
-type bigBed 5
-bigDataUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/hg38/Uterine_Corpus_Endometrial_Carcinoma_stage(I-IV)_TCGA_CES.bb
+type bigBed 5 +
+bigDataUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/hg38/TCGA_UCEC_CES.bb
 searchIndex name
 visibility full
 spectrum on
 scoreMin 0
 scoreMax 100
 color 199,155,0
-mouseOver variant name: $name; effect size: $score
+mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score s* = $score | TCGA patients with variant: $n_patients | *s = 10*log10(gamma) - 10, not gamma
+filterValues.consequence missense,nonsense,silent,stop_lost,noncoding
+filterLabel.consequence Variant consequence (uncheck "silent" to hide silent mutations)
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_UCEC_description.html
