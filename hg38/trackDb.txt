@@ -284,7 +284,7 @@ track SKCM_Pimary_CES
 parent Cancer_Effect_Size_TCGA_20_Cancer_Types on
 shortLabel SKCM PRIM CES
 longLabel SKCM – Skin Cutaneous Melanoma_Primary_TCGA Cancer Effect Size
-type bigBed 5
+type bigBed 5 +
 bigDataUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/hg38/TCGA_SKCM_primary_CES.bb
 searchIndex name
 visibility full
@@ -292,14 +292,16 @@ spectrum on
 scoreMin 0
 scoreMax 100
 color 255,105,180
-mouseOver $name | display score* = $score | *transformed value, not the cancer effect size
+mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score* = $score | TCGA patients with variant: $n_patients | *transformed score s = 10*log10(gamma) - 10, not gamma
+filterValues.consequence missense,nonsense,silent,stop_lost,noncoding
+filterLabel.consequence Variant consequence (uncheck "silent" to hide silent mutations)
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_SKCM_primary_description.html
 
 track SKCM_Metastatic_CES
 parent Cancer_Effect_Size_TCGA_20_Cancer_Types on
 shortLabel SKCM Met CES
 longLabel SKCM – Skin Cutaneous Melanoma_Metastatic_TCGA Cancer Effect Size
-type bigBed 5
+type bigBed 5 +
 bigDataUrl https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/hg38/TCGA_SKCM_metastatic_CES.bb
 searchIndex name
 visibility full
@@ -307,7 +309,9 @@ spectrum on
 scoreMin 0
 scoreMax 100
 color 255,105,180
-mouseOver $name | display score* = $score | *transformed value, not the cancer effect size
+mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score* = $score | TCGA patients with variant: $n_patients | *transformed score s = 10*log10(gamma) - 10, not gamma
+filterValues.consequence missense,nonsense,silent,stop_lost,noncoding
+filterLabel.consequence Variant consequence (uncheck "silent" to hide silent mutations)
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_SKCM_metastatic_description.html
 
 track STAD_CES
