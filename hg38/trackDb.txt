@@ -20,7 +20,7 @@ spectrum on
 scoreMin 0
 scoreMax 100
 color 0,0,255
-mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score s* = $score | TCGA patients with variant: $n_patients | *s = 10*log10(gamma) - 10, not gamma
+mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score* = $score | TCGA patients with variant: $n_patients | *transformed score s = 10*log10(gamma) - 10, not gamma
 filterValues.consequence missense,nonsense,silent,stop_lost,noncoding
 filterLabel.consequence Variant consequence (uncheck "silent" to hide silent mutations)
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_BRCA_description.html
@@ -37,7 +37,7 @@ spectrum on
 scoreMin 0
 scoreMax 100
 color 0,128,255
-mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score s* = $score | TCGA patients with variant: $n_patients | *s = 10*log10(gamma) - 10, not gamma
+mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score* = $score | TCGA patients with variant: $n_patients | *transformed score s = 10*log10(gamma) - 10, not gamma
 filterValues.consequence missense,nonsense,silent,stop_lost,noncoding
 filterLabel.consequence Variant consequence (uncheck "silent" to hide silent mutations)
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_BLCA_description.html
@@ -54,7 +54,7 @@ spectrum on
 scoreMin 0
 scoreMax 100
 color 255,0,128
-mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score s* = $score | TCGA patients with variant: $n_patients | *s = 10*log10(gamma) - 10, not gamma
+mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score* = $score | TCGA patients with variant: $n_patients | *transformed score s = 10*log10(gamma) - 10, not gamma
 filterValues.consequence missense,nonsense,silent,stop_lost,noncoding
 filterLabel.consequence Variant consequence (uncheck "silent" to hide silent mutations)
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_CESC_description.html
@@ -71,7 +71,7 @@ spectrum on
 scoreMin 0
 scoreMax 100
 color 128,0,255
-mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score s* = $score | TCGA patients with variant: $n_patients | *s = 10*log10(gamma) - 10, not gamma
+mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score* = $score | TCGA patients with variant: $n_patients | *transformed score s = 10*log10(gamma) - 10, not gamma
 filterValues.consequence missense,nonsense,silent,stop_lost,noncoding
 filterLabel.consequence Variant consequence (uncheck "silent" to hide silent mutations)
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_COAD_description.html
@@ -88,7 +88,7 @@ spectrum on
 scoreMin 0
 scoreMax 100
 color 0,200,200
-mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score s* = $score | TCGA patients with variant: $n_patients | *s = 10*log10(gamma) - 10, not gamma
+mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score* = $score | TCGA patients with variant: $n_patients | *transformed score s = 10*log10(gamma) - 10, not gamma
 filterValues.consequence missense,nonsense,silent,stop_lost,noncoding
 filterLabel.consequence Variant consequence (uncheck "silent" to hide silent mutations)
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_ESCA_description.html
@@ -105,7 +105,7 @@ spectrum on
 scoreMin 0
 scoreMax 100
 color 200,0,200
-mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score s* = $score | TCGA patients with variant: $n_patients | *s = 10*log10(gamma) - 10, not gamma
+mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score* = $score | TCGA patients with variant: $n_patients | *transformed score s = 10*log10(gamma) - 10, not gamma
 filterValues.consequence missense,nonsense,silent,stop_lost,noncoding
 filterLabel.consequence Variant consequence (uncheck "silent" to hide silent mutations)
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_GBM_description.html
@@ -122,7 +122,7 @@ spectrum on
 scoreMin 0
 scoreMax 100
 color 150,75,0
-mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score s* = $score | TCGA patients with variant: $n_patients | *s = 10*log10(gamma) - 10, not gamma
+mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score* = $score | TCGA patients with variant: $n_patients | *transformed score s = 10*log10(gamma) - 10, not gamma
 filterValues.consequence missense,nonsense,silent,stop_lost,noncoding
 filterLabel.consequence Variant consequence (uncheck "silent" to hide silent mutations)
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_HNSC_description.html
@@ -139,7 +139,7 @@ spectrum on
 scoreMin 0
 scoreMax 100
 color 0,150,75
-mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score s* = $score | TCGA patients with variant: $n_patients | *s = 10*log10(gamma) - 10, not gamma
+mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score* = $score | TCGA patients with variant: $n_patients | *transformed score s = 10*log10(gamma) - 10, not gamma
 filterValues.consequence missense,nonsense,silent,stop_lost,noncoding
 filterLabel.consequence Variant consequence (uncheck "silent" to hide silent mutations)
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_KIRC_description.html
@@ -156,7 +156,7 @@ spectrum on
 scoreMin 0
 scoreMax 100
 color 75,0,130
-mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score s* = $score | TCGA patients with variant: $n_patients | *s = 10*log10(gamma) - 10, not gamma
+mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score* = $score | TCGA patients with variant: $n_patients | *transformed score s = 10*log10(gamma) - 10, not gamma
 filterValues.consequence missense,nonsense,silent,stop_lost,noncoding
 filterLabel.consequence Variant consequence (uncheck "silent" to hide silent mutations)
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_LGG_description.html
@@ -173,7 +173,7 @@ spectrum on
 scoreMin 0
 scoreMax 100
 color 210,105,30
-mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score s* = $score | TCGA patients with variant: $n_patients | *s = 10*log10(gamma) - 10, not gamma
+mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score* = $score | TCGA patients with variant: $n_patients | *transformed score s = 10*log10(gamma) - 10, not gamma
 filterValues.consequence missense,nonsense,silent,stop_lost,noncoding
 filterLabel.consequence Variant consequence (uncheck "silent" to hide silent mutations)
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_LIHC_description.html
@@ -190,7 +190,7 @@ spectrum on
 scoreMin 0
 scoreMax 100
 color 0,191,255
-mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score s* = $score | TCGA patients with variant: $n_patients | *s = 10*log10(gamma) - 10, not gamma
+mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score* = $score | TCGA patients with variant: $n_patients | *transformed score s = 10*log10(gamma) - 10, not gamma
 filterValues.consequence missense,nonsense,silent,stop_lost,noncoding
 filterLabel.consequence Variant consequence (uncheck "silent" to hide silent mutations)
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_LUAD_description.html
@@ -207,7 +207,7 @@ spectrum on
 scoreMin 0
 scoreMax 100
 color 46,139,87
-mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score s* = $score | TCGA patients with variant: $n_patients | *s = 10*log10(gamma) - 10, not gamma
+mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score* = $score | TCGA patients with variant: $n_patients | *transformed score s = 10*log10(gamma) - 10, not gamma
 filterValues.consequence missense,nonsense,silent,stop_lost,noncoding
 filterLabel.consequence Variant consequence (uncheck "silent" to hide silent mutations)
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_DLBC_description.html
@@ -224,7 +224,7 @@ spectrum on
 scoreMin 0
 scoreMax 100
 color 199,21,133
-mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score s* = $score | TCGA patients with variant: $n_patients | *s = 10*log10(gamma) - 10, not gamma
+mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score* = $score | TCGA patients with variant: $n_patients | *transformed score s = 10*log10(gamma) - 10, not gamma
 filterValues.consequence missense,nonsense,silent,stop_lost,noncoding
 filterLabel.consequence Variant consequence (uncheck "silent" to hide silent mutations)
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_OV_description.html
@@ -241,7 +241,7 @@ spectrum on
 scoreMin 0
 scoreMax 100
 color 255,140,0
-mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score s* = $score | TCGA patients with variant: $n_patients | *s = 10*log10(gamma) - 10, not gamma
+mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score* = $score | TCGA patients with variant: $n_patients | *transformed score s = 10*log10(gamma) - 10, not gamma
 filterValues.consequence missense,nonsense,silent,stop_lost,noncoding
 filterLabel.consequence Variant consequence (uncheck "silent" to hide silent mutations)
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_PAAD_description.html
@@ -258,7 +258,7 @@ spectrum on
 scoreMin 0
 scoreMax 100
 color 0,100,0
-mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score s* = $score | TCGA patients with variant: $n_patients | *s = 10*log10(gamma) - 10, not gamma
+mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score* = $score | TCGA patients with variant: $n_patients | *transformed score s = 10*log10(gamma) - 10, not gamma
 filterValues.consequence missense,nonsense,silent,stop_lost,noncoding
 filterLabel.consequence Variant consequence (uncheck "silent" to hide silent mutations)
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_PRAD_description.html
@@ -275,7 +275,7 @@ spectrum on
 scoreMin 0
 scoreMax 100
 color 139,0,0
-mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score s* = $score | TCGA patients with variant: $n_patients | *s = 10*log10(gamma) - 10, not gamma
+mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score* = $score | TCGA patients with variant: $n_patients | *transformed score s = 10*log10(gamma) - 10, not gamma
 filterValues.consequence missense,nonsense,silent,stop_lost,noncoding
 filterLabel.consequence Variant consequence (uncheck "silent" to hide silent mutations)
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_READ_description.html
@@ -322,7 +322,7 @@ spectrum on
 scoreMin 0
 scoreMax 100
 color 218,165,32
-mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score s* = $score | TCGA patients with variant: $n_patients | *s = 10*log10(gamma) - 10, not gamma
+mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score* = $score | TCGA patients with variant: $n_patients | *transformed score s = 10*log10(gamma) - 10, not gamma
 filterValues.consequence missense,nonsense,silent,stop_lost,noncoding
 filterLabel.consequence Variant consequence (uncheck "silent" to hide silent mutations)
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_STAD_description.html
@@ -339,7 +339,7 @@ spectrum on
 scoreMin 0
 scoreMax 100
 color 135,206,235
-mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score s* = $score | TCGA patients with variant: $n_patients | *s = 10*log10(gamma) - 10, not gamma
+mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score* = $score | TCGA patients with variant: $n_patients | *transformed score s = 10*log10(gamma) - 10, not gamma
 filterValues.consequence missense,nonsense,silent,stop_lost,noncoding
 filterLabel.consequence Variant consequence (uncheck "silent" to hide silent mutations)
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_THCA_description.html
@@ -356,7 +356,7 @@ spectrum on
 scoreMin 0
 scoreMax 100
 color 199,155,0
-mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score s* = $score | TCGA patients with variant: $n_patients | *s = 10*log10(gamma) - 10, not gamma
+mouseOver $name ($consequence) | cancer effect size gamma = $gamma | transformed score* = $score | TCGA patients with variant: $n_patients | *transformed score s = 10*log10(gamma) - 10, not gamma
 filterValues.consequence missense,nonsense,silent,stop_lost,noncoding
 filterLabel.consequence Variant consequence (uncheck "silent" to hide silent mutations)
 html https://townsend-lab-yale.github.io/UCSC_GenomeBrowser_Hub/TCGA_UCEC_description.html
