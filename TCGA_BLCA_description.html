@@ -21,9 +21,9 @@
   </p>
   <p>
     <strong>You do not need to back-transform anything.</strong> Hovering over a variant shows its consequence, the cancer effect size
-    <em>&gamma;</em>, the transformed score marked with an asterisk (<em>s</em>*) so it is not mistaken for <em>&gamma;</em>, and the number of
-    TCGA patients carrying the variant. Example: <em>TP53_R175H (missense) | cancer effect size gamma = 2,500 | transformed score s* = 24 |
-    TCGA patients with variant: 2</em>.
+    <em>&gamma;</em>, the transformed score <em>s</em> (labeled with an asterisk so it is not mistaken for <em>&gamma;</em>), and the number of
+    TCGA patients carrying the variant. Example from the breast cancer track: <em>TP53_R175H (missense) | cancer effect size gamma = 10,000 |
+    transformed score* = 30 | TCGA patients with variant: 19 | *transformed score s = 10*log10(gamma) - 10, not gamma</em>.
   </p>
   <p>
     <strong>Why scores are never negative.</strong> The bigBed format requires the standard BED <em>score</em> field to be a whole number from
