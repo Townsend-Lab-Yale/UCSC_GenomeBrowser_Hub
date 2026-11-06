@@ -52,7 +52,7 @@ map_gene_level_variants <- function(dt) {
 }
 
 make_browser_score <- function(selection_intensity) {
-  score <- round((10 * log10(selection_intensity)) - 10)
+  score <- round(10 * log10(selection_intensity))
   score[!is.finite(score)] <- 0
   pmin(1000L, pmax(0L, as.integer(score)))
 }
