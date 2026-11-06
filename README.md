@@ -42,8 +42,9 @@ Each cohort track contains recurrent variants only (carried by at least 2 TCGA p
 The autoSql schema of the track files is in `scripts/tcga_ces.as`.
 
 Track columns: chrom, chromStart, chromEnd, name, score, gamma, n_patients, consequence.
-`score` is the transformed score s = 10*log10(gamma) - 10, rounded; bigBed requires 0-1000, so s < 0 is stored as 0
-(shown as gamma "<10"). The two SKCM tracks keep their original five columns.
+`score` is the transformed score s = 10*log10(gamma), rounded (gamma = 10^(s/10)); bigBed requires 0-1000, so negative
+values would be stored as 0. Eight variants whose original estimate was recorded only as gamma < 10 are stored with
+score 0 and gamma "<10".
 
 ## Command-line access (copy and paste)
 
