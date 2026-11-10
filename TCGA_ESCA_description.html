@@ -22,14 +22,14 @@
   <p>
     <strong>You do not need to back-transform anything.</strong> Hovering over a variant shows its consequence, the cancer effect size
     <em>&gamma;</em>, the transformed score <em>s</em> (labeled with an asterisk so it is not mistaken for <em>&gamma;</em>), and the number of
-    TCGA patients carrying the variant. Example from the breast cancer track: <em>TP53_R175H (missense) | cancer effect size gamma = 10,000 |
-    transformed score* = 40 | TCGA patients with variant: 19 | *transformed score s = 10*log10(gamma), not gamma</em>.
+    TCGA patients carrying the variant. Example from the breast cancer track: <em>TP53_R175H (missense) | cancer effect size gamma = 13,676 |
+    transformed score* = 41 | TCGA patients with variant: 19 | *transformed score s = 10*log10(gamma), not gamma</em>.
   </p>
   <p>
     <strong>Why scores are never negative.</strong> The bigBed format requires the standard BED <em>score</em> field to be a whole number from
     0 to 1000. The transformed score is therefore rounded, and negative values (<em>&gamma;</em>&nbsp;&lt;&nbsp;1, negative selection) would be
-    stored as 0. Variants whose original estimate was recorded only as <em>&gamma;</em>&nbsp;&lt;&nbsp;10 (8 variants across all tracks) are
-    stored with a score of 0 and shown as &ldquo;gamma = &lt;10&rdquo;. Because <em>s</em> is rounded, <em>&gamma;</em> is approximate (within about &plusmn;12%).
+    stored as 0; no variant in the tracks has <em>&gamma;</em>&nbsp;&le;&nbsp;1. Because <em>s</em> is rounded, <em>&gamma;</em> computed from <em>s</em> is
+    approximate (within about &plusmn;12%), so each track also stores <em>&gamma;</em> itself, as estimated by cancereffectsizeR.
   </p>
   <p>
     Consistent with established cancereffectsizeR practice, this track includes only <strong>recurrently mutated
@@ -62,7 +62,7 @@
     <li><strong>chromEnd</strong> &ndash; End position (exclusive) of the variant (SNV)</li>
     <li><strong>name</strong> &ndash; Variant identifier, GENE_AACHANGE (coding) or chr:pos_ref&gt;alt (noncoding)</li>
     <li><strong>score</strong> &ndash; Transformed score <em>s</em> = 10&nbsp;&middot;&nbsp;log<sub>10</sub>(<em>&gamma;</em>), rounded (negative values stored as 0)</li>
-    <li><strong>gamma</strong> &ndash; Cancer effect size <em>&gamma;</em> = 10<sup><em>s</em>/10</sup> (&ldquo;&lt;10&rdquo; where only an upper bound is available)</li>
+    <li><strong>gamma</strong> &ndash; Cancer effect size <em>&gamma;</em> as estimated by cancereffectsizeR (whole number for <em>&gamma;</em>&nbsp;&ge;&nbsp;100)</li>
     <li><strong>n_patients</strong> &ndash; Number of TCGA patients in the cohort carrying the variant</li>
     <li><strong>consequence</strong> &ndash; missense, silent, nonsense, stop_lost or noncoding</li>
   </ul>

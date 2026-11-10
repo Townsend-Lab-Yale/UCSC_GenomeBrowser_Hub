@@ -42,9 +42,16 @@ Each cohort track contains recurrent variants only (carried by at least 2 TCGA p
 The autoSql schema of the track files is in `scripts/tcga_ces.as`.
 
 Track columns: chrom, chromStart, chromEnd, name, score, gamma, n_patients, consequence.
-`score` is the transformed score s = 10*log10(gamma), rounded (gamma = 10^(s/10)); bigBed requires 0-1000, so negative
-values would be stored as 0. Eight variants whose original estimate was recorded only as gamma < 10 are stored with
-score 0 and gamma "<10".
+`score` is the transformed score s = 10*log10(gamma), rounded; bigBed requires 0-1000, so negative values would be
+stored as 0 (no variant has gamma <= 1). `gamma` is the cancer effect size estimated by cancereffectsizeR.
+
+## Results tables
+
+`results/TCGA_<COHORT>_cancer_effects.tsv` holds the cancereffectsizeR results behind each track (one row per recurrent
+variant): variant_name, variant_type, gene, chr, pos (hg38), selection_intensity (gamma), ci_low_95, ci_high_95,
+included_with_variant (patients carrying the variant) and included_total. They were exported from the CESA objects
+(cancereffectsizeR 2.10.2, ces.refset.hg38 1.4.0.9000; `ces_variant()` on variants with `min_freq = 2`) with
+`scripts/05_export_cesa_results.R`.
 
 ## Command-line access (copy and paste)
 
