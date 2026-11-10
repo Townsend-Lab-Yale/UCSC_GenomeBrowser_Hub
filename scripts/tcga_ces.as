@@ -6,7 +6,7 @@ table tcgaCES
     uint   chromEnd;    "End position of the variant (exclusive)"
     string name;        "Variant identifier: GENE_AACHANGE (coding) or chr:pos_ref>alt (noncoding)"
     uint   score;       "Transformed score s = 10*log10(gamma), rounded; bigBed requires 0-1000, so negative values are stored as 0"
-    string gamma;       "Cancer effect size (scaled selection coefficient) gamma = 10^(s/10); '<10' where only an upper bound is available"
+    string gamma;       "Cancer effect size (scaled selection coefficient) gamma estimated by cancereffectsizeR"
     uint   n_patients;  "Number of TCGA patients in the cohort carrying the variant (GDC open-access mutation calls)"
     string consequence; "missense, silent, nonsense, stop_lost or noncoding"
     )
